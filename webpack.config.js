@@ -3,13 +3,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
-        use: ['babel-loader']
-      }
-    ]
+        test: /\.(jsx?)$/,
+        use: ['babel-loader', 'eslint-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
   devServer: {
-    contentBase: './dist'
-   
-  }
+    contentBase: './dist',
+
+  },
 }
