@@ -6,6 +6,10 @@ module.exports = {
         test: /\.(jsx?)$/,
         use: ['babel-loader', 'eslint-loader'],
       },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/,
+        use: [{ loader: 'url-loader', options: { limit: 10000 } }],
+      },
     ],
   },
   resolve: {
